@@ -26,7 +26,16 @@ seed_data = YAML.load_file(Rails.root.join("db", "seeds_data.yml"))
 seed_data.each do |model_name, records|
   model_class = model_name.classify.constantize
   records.each do |record_data|
-    model_instance = model_class.new(record_data.except("image_path"))
+    model_instance =
+      model_class.new(record_data.except("image_path", "school_name"))
+
+    if record_data["school_name"]
+      school = School.find_by(name: record_data["school_name"])
+      model_instance.school = school if model_instance.has_attribute?(
+        :school_id,
+      )
+    end
+
     if record_data["image_path"] && model_instance.respond_to?(:image)
       model_instance.image.attach(
         io:
@@ -42,5 +51,6 @@ seed_data.each do |model_name, records|
       )
     end
     model_instance.save!
+    puts "Created #{model_name.singularize}: #{model_instance.attributes.except("created_at", "updated_at", "id")}"
   end
 end

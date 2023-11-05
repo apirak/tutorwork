@@ -63,3 +63,13 @@ schools:
     image_path: "logo/ec.jpg"
   - name: "MoMo School"
     image_path: "logo/momo.jpg"
+
+branches:
+  - name: "English Corner Branch 1"
+    school_name: "English Corner"
+  - name: "English Corner Branch 2"
+    school_name: "English Corner"
+  - name: "Momo School Branch 1"
+    school_name: "MoMo School"
+  - name: "Momo School Branch 2"
+    school_name: "MoMo School"
