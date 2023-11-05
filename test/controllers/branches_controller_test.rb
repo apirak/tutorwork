@@ -1,9 +1,7 @@
 require "test_helper"
 
 class BranchesControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @branch = branches(:one)
-  end
+  setup { @branch = branches(:one) }
 
   test "should get index" do
     get branches_url
@@ -17,7 +15,13 @@ class BranchesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create branch" do
     assert_difference("Branch.count") do
-      post branches_url, params: { branch: { name: @branch.name, school_id: @branch.school_id } }
+      post branches_url,
+           params: {
+             branch: {
+               name: @branch.name,
+               school_id: @branch.school_id,
+             },
+           }
     end
 
     assert_redirected_to branch_url(Branch.last)
@@ -34,14 +38,18 @@ class BranchesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update branch" do
-    patch branch_url(@branch), params: { branch: { name: @branch.name, school_id: @branch.school_id } }
+    patch branch_url(@branch),
+          params: {
+            branch: {
+              name: @branch.name,
+              school_id: @branch.school_id,
+            },
+          }
     assert_redirected_to branch_url(@branch)
   end
 
   test "should destroy branch" do
-    assert_difference("Branch.count", -1) do
-      delete branch_url(@branch)
-    end
+    assert_difference("Branch.count", -1) { delete branch_url(@branch) }
 
     assert_redirected_to branches_url
   end

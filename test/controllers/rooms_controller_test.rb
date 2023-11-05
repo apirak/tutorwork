@@ -1,9 +1,7 @@
 require "test_helper"
 
 class RoomsControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @room = rooms(:one)
-  end
+  setup { @room = rooms(:one) }
 
   test "should get index" do
     get rooms_url
@@ -17,7 +15,14 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create room" do
     assert_difference("Room.count") do
-      post rooms_url, params: { room: { location: @room.location, name: @room.name } }
+      post rooms_url,
+           params: {
+             room: {
+               location: @room.location,
+               name: @room.name,
+               branch_id: @room.branch_id,
+             },
+           }
     end
 
     assert_redirected_to room_url(Room.last)
@@ -34,14 +39,19 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update room" do
-    patch room_url(@room), params: { room: { location: @room.location, name: @room.name } }
+    patch room_url(@room),
+          params: {
+            room: {
+              location: @room.location,
+              name: @room.name,
+              branch_id: @room.branch_id,
+            },
+          }
     assert_redirected_to room_url(@room)
   end
 
   test "should destroy room" do
-    assert_difference("Room.count", -1) do
-      delete room_url(@room)
-    end
+    assert_difference("Room.count", -1) { delete room_url(@room) }
 
     assert_redirected_to rooms_url
   end
