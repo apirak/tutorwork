@@ -16,3 +16,22 @@ teachers:
   - name: "Charlie Davis"
     nickname: "CD"
     image_path: "charlie.jpg"
+
+curriculums:
+  - name: "English Normal"
+    short_name: "Eng-Norm"
+    description: "Basic comprehension and communication skills in English."
+  - name: "English Advanced"
+    short_name: "Eng-Adv"
+    description: "Advanced comprehension and communication skills in English."
+  - name: "Phonics"
+    short_name: "Phonics"
+    description: "Phonetic awareness and reading skills development."
+  - name: "Mathematics"
+    short_name: "Math"
+    description:
+      "Exploration of fundamental and advanced mathematical concepts."
+  - name: "Art"
+    short_name: "Art"
+    description:
+      "Fostering creativity and expression through various artistic mediums."
