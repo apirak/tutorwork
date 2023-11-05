@@ -9,13 +9,13 @@ rooms:
 teachers:
   - name: "Alice Johnson"
     nickname: "AJ"
-    image_path: "alice.jpg"
+    image_path: "avatars/alice.jpg"
   - name: "Bob Williams"
     nickname: "BW"
-    image_path: "bob.jpg"
+    image_path: "avatars/bob.jpg"
   - name: "Charlie Davis"
     nickname: "CD"
-    image_path: "charlie.jpg"
+    image_path: "avatars/charlie.jpg"
 
 curriculums:
   - name: "English Normal"
@@ -35,3 +35,25 @@ curriculums:
     short_name: "Art"
     description:
       "Fostering creativity and expression through various artistic mediums."
+
+parents:
+  - name: "Franklin Bennett"
+    nickname: "Frank"
+    address: "123 Main St, Springfield"
+    image_path: "avatars/franklin.jpg"
+  - name: "Grace Patterson"
+    nickname: "Gracie"
+    address: "456 Elm St, Springfield"
+    image_path: "avatars/grace.jpg"
+  - name: "Howard Stewart"
+    nickname: "Howie"
+    address: "789 Oak St, Springfield"
+    image_path: "avatars/howard.jpg"
+  - name: "Irene Mitchell"
+    nickname: "Rene"
+    address: "101 Maple St, Springfield"
+    image_path: "avatars/irene.jpg"
+  - name: "Jackie Coleman"
+    nickname: "Jack"
+    address: "202 Pine St, Springfield"
+    image_path: "avatars/jackie.jpg"

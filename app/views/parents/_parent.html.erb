@@ -1,0 +1,22 @@
+<div id="<%= dom_id parent %>">
+  <p>
+    <strong>Name:</strong>
+    <%= parent.name %>
+  </p>
+
+  <p>
+    <strong>Nickname:</strong>
+    <%= parent.nickname %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= parent.address %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= link_to parent.image.filename, parent.image if parent.image.attached? %>
+  </p>
+
+</div>
