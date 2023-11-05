@@ -1,0 +1,17 @@
+<div id="<%= dom_id teacher %>">
+  <p>
+    <strong>Name:</strong>
+    <%= teacher.name %>
+  </p>
+
+  <p>
+    <strong>Nickname:</strong>
+    <%= teacher.nickname %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= link_to teacher.image.filename, teacher.image if teacher.image.attached? %>
+  </p>
+
+</div>

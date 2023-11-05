@@ -1,0 +1,18 @@
+rooms:
+  - name: "Room 101"
+    location: "Building A"
+  - name: "Room 202"
+    location: "Building B"
+  - name: "Room 303"
+    location: "Building C"
+
+teachers:
+  - name: "Alice Johnson"
+    nickname: "AJ"
+    image_path: "alice.jpg"
+  - name: "Bob Williams"
+    nickname: "BW"
+    image_path: "bob.jpg"
+  - name: "Charlie Davis"
+    nickname: "CD"
+    image_path: "charlie.jpg"
