@@ -27,7 +27,7 @@ class BranchesController < ApplicationController
     respond_to do |format|
       if @branch.save
         format.html do
-          redirect_to branch_url(@branch),
+          redirect_to school_branch_url(@school, @branch),
                       notice: "Branch was successfully created."
         end
         format.json { render :show, status: :created, location: @branch }
@@ -45,7 +45,7 @@ class BranchesController < ApplicationController
     respond_to do |format|
       if @branch.update(branch_params)
         format.html do
-          redirect_to branch_url(@branch),
+          redirect_to school_branch_url(@branch),
                       notice: "Branch was successfully updated."
         end
         format.json { render :show, status: :ok, location: @branch }
@@ -64,7 +64,8 @@ class BranchesController < ApplicationController
 
     respond_to do |format|
       format.html do
-        redirect_to branches_url, notice: "Branch was successfully destroyed."
+        redirect_to school_branches_url(@school),
+                    notice: "Branch was successfully destroyed."
       end
       format.json { head :no_content }
     end
