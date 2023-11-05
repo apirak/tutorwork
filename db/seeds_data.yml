@@ -57,3 +57,9 @@ parents:
     nickname: "Jack"
     address: "202 Pine St, Springfield"
     image_path: "avatars/jackie.jpg"
+
+schools:
+  - name: "English Corner"
+    image_path: "logo/ec.jpg"
+  - name: "MoMo School"
+    image_path: "logo/momo.jpg"
