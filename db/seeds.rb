@@ -27,7 +27,16 @@ seed_data.each do |model_name, records|
   model_class = model_name.classify.constantize
   records.each do |record_data|
     model_instance =
-      model_class.new(record_data.except("image_path", "school_name"))
+      model_class.new(
+        record_data.except("image_path", "school_name", "branches_name"),
+      )
+
+    if record_data["branches_name"]
+      branch = Branch.find_by(name: record_data["branches_name"])
+      model_instance.branch = branch if model_instance.has_attribute?(
+        :branch_id,
+      )
+    end
 
     if record_data["school_name"]
       school = School.find_by(name: record_data["school_name"])

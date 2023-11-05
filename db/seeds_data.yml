@@ -17,10 +17,13 @@ branches:
 rooms:
   - name: "Room 101"
     location: "Building A"
+    branches_name: "English Corner Branch 1"
   - name: "Room 202"
     location: "Building B"
+    branches_name: "English Corner Branch 1"
   - name: "Room 303"
     location: "Building C"
+    branches_name: "English Corner Branch 1"
 
 teachers:
   - name: "Alice Johnson"
